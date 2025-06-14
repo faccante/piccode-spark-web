@@ -58,9 +58,11 @@ IO.println(message)`;
                 Get Started
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="px-8 py-3">
-              View Docs
-            </Button>
+            <Link to="/documentation">
+              <Button variant="outline" size="lg" className="px-8 py-3">
+                View Docs
+              </Button>
+            </Link>
           </div>
 
           {/* Code Example */}
