@@ -1,8 +1,7 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download, Star, Users, Zap } from "lucide-react";
+import { Download, Star, Users, Zap, Code, Coffee } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import CodeBlock from "@/components/CodeBlock";
@@ -21,18 +20,18 @@ IO.println(message)`;
   const features = [
     {
       icon: <Zap className="h-6 w-6" />,
-      title: "Functional First",
-      description: "Built for functional programming with immutable data structures and first-class functions"
+      title: "Functional Programming",
+      description: "Pure functional programming language with immutable data structures and first-class functions for elegant solutions"
     },
     {
-      icon: <Star className="h-6 w-6" />,
-      title: "Pattern Matching",
-      description: "Powerful pattern matching with when expressions for elegant control flow"
+      icon: <Code className="h-6 w-6" />,
+      title: "Ultra Simple - 8 Keywords",
+      description: "Incredibly simple syntax with only 8 keywords, making it easy to learn and master quickly"
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: "Pipe Operators",
-      description: "Chain operations naturally with pipe operators for readable data transformations"
+      icon: <Coffee className="h-6 w-6" />,
+      title: "Java Embeddable",
+      description: "Seamlessly embed PiccodeScript code within Java applications for powerful scripting capabilities"
     }
   ];
 
