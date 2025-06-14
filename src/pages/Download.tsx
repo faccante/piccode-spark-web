@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Download as DownloadIcon, Copy, Check, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import CodeBlock from "@/components/CodeBlock";
 import Footer from "@/components/Footer";
@@ -169,12 +170,14 @@ results |> forEach(IO.println)`;
             
             <div className="mt-6 pt-6 border-t border-gray-200">
               <p className="text-gray-600 mb-4">
-                Need to build from source? Check out our comprehensive build instructions on GitHub.
+                Need to build from source? Check out our comprehensive build instructions.
               </p>
-              <Button variant="outline" className="group">
-                <ExternalLink className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                View Build Instructions
-              </Button>
+              <Link to="/documentation">
+                <Button variant="outline" className="group">
+                  <ExternalLink className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  View Build Instructions
+                </Button>
+              </Link>
             </div>
           </Card>
 
