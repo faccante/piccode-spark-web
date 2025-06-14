@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Download as DownloadIcon, Copy, Check, ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import CodeBlock from "@/components/CodeBlock";
+import Footer from "@/components/Footer";
 
 const Download = () => {
   const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
@@ -192,6 +193,8 @@ results |> forEach(IO.println)`;
           </Card>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

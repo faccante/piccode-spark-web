@@ -20,12 +20,9 @@ const Navigation = () => {
             <Link to="/" className="text-gray-700 hover:text-purple-600 transition-colors">
               Home
             </Link>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">
+            <Link to="/documentation" className="text-gray-700 hover:text-purple-600 transition-colors">
               Documentation
-            </a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">
-              Examples
-            </a>
+            </Link>
             <a href="https://github.com" className="text-gray-700 hover:text-purple-600 transition-colors">
               GitHub
             </a>
@@ -57,20 +54,13 @@ const Navigation = () => {
               >
                 Home
               </Link>
-              <a
-                href="#"
+              <Link
+                to="/documentation"
                 className="block px-3 py-2 text-gray-700 hover:text-purple-600"
                 onClick={() => setIsOpen(false)}
               >
                 Documentation
-              </a>
-              <a
-                href="#"
-                className="block px-3 py-2 text-gray-700 hover:text-purple-600"
-                onClick={() => setIsOpen(false)}
-              >
-                Examples
-              </a>
+              </Link>
               <a
                 href="https://github.com"
                 className="block px-3 py-2 text-gray-700 hover:text-purple-600"
