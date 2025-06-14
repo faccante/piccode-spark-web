@@ -50,10 +50,10 @@ results |> forEach(IO.println)`;
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-6">
-              Download PicCode
+              Download PiccodeScript
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Get started with PicCode Script in seconds. Choose your platform and start coding functionally.
+              Get started with PiccodeScript in seconds. Choose your platform and start coding functionally.
             </p>
           </div>
 
@@ -185,7 +185,7 @@ results |> forEach(IO.println)`;
           <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
             <h3 className="text-2xl font-bold mb-6 text-gray-800">Quick Start</h3>
             <p className="text-gray-600 mb-6">
-              Once installed, create your first PicCode script and run it:
+              Once installed, create your first PiccodeScript script and run it:
             </p>
             <CodeBlock code={exampleCode} title="fibonacci.pic" />
             <div className="mt-6 bg-gray-900 rounded-lg p-4">

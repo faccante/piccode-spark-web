@@ -18,7 +18,7 @@ const Documentation = () => {
               Documentation
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Everything you need to learn and master PicCode Script
+              Everything you need to learn and master PiccodeScript
             </p>
           </div>
 
@@ -47,7 +47,7 @@ const Documentation = () => {
                 <Book className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                PicCode Book
+                PiccodeScript Book
               </h3>
               <p className="text-gray-600 mb-4">
                 Comprehensive guide and tutorial in PDF format
@@ -85,7 +85,7 @@ const Documentation = () => {
             </div>
             
             <p className="text-gray-600 mb-6">
-              Want to build PicCode Script from source? Follow these steps to compile and install it on your system.
+              Want to build PiccodeScript from source? Follow these steps to compile and install it on your system.
             </p>
 
             <div className="space-y-6">

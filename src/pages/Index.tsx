@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -14,7 +15,7 @@ const Index = () => {
 function greet(name="World") = 
   "Hello, " + name + "!"
 
-let message = greet("PicCode")
+let message = greet("PiccodeScript")
 IO.println(message)`;
 
   const features = [
@@ -44,7 +45,7 @@ IO.println(message)`;
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-6">
-              PicCode Script
+              PiccodeScript
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               A modern functional programming language that makes complex problems simple and elegant
@@ -74,7 +75,7 @@ IO.println(message)`;
       <section className="py-16 px-4 bg-white/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
-            Why Choose PicCode?
+            Why Choose PiccodeScript?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
