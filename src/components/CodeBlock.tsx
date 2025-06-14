@@ -102,9 +102,9 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
         >
           {copied ? 'Copied!' : 'Copy'}
         </Button>
-        <pre className="p-6 overflow-x-auto text-sm leading-relaxed">
+        <pre className="p-6 overflow-x-auto text-sm leading-relaxed text-left">
           <code 
-            className="text-gray-300 font-mono"
+            className="text-gray-300 font-mono block text-left"
             dangerouslySetInnerHTML={{ __html: highlightedCode }}
           />
         </pre>
