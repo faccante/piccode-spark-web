@@ -12,10 +12,11 @@ interface CodeBlockProps {
 
 const CodeBlock = ({ code, title }: CodeBlockProps) => {
   const [copied, setCopied] = useState(false);
+  const [highlightedCode, setHighlightedCode] = useState('');
 
   useEffect(() => {
     // Register PicCode language
-    hljs.registerLanguage('piccode', function() {
+    hljs.registerLanguage('piccode', function(hljs) {
       return {
         name: 'PicCode',
         keywords: {
@@ -24,32 +25,17 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
           literal: 'true false'
         },
         contains: [
-          // Comments
-          {
-            className: 'comment',
-            begin: '//',
-            end: '$'
-          },
-          // Strings
+          hljs.COMMENT('//', '$'),
           {
             className: 'string',
             begin: '"',
             end: '"',
-            contains: [
-              {
-                className: 'subst',
-                begin: '\\\\.',
-                relevance: 0
-              }
-            ]
+            contains: [hljs.BACKSLASH_ESCAPE]
           },
-          // Numbers
           {
             className: 'number',
-            begin: '\\b\\d+(\\.\\d+)?',
-            relevance: 0
+            begin: '\\b\\d+(\\.\\d+)?\\b'
           },
-          // Function definitions
           {
             className: 'function',
             beginKeywords: 'function',
@@ -57,8 +43,7 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
             contains: [
               {
                 className: 'title',
-                begin: '[a-zA-Z_][a-zA-Z0-9_]*',
-                relevance: 0
+                begin: '[a-zA-Z_][a-zA-Z0-9_]*'
               },
               {
                 className: 'params',
@@ -73,7 +58,6 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
               }
             ]
           },
-          // Operators
           {
             className: 'operator',
             begin: '(\\|>|->|=|\\+|\\-|\\*|\\/|<|>)'
@@ -81,7 +65,16 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
         ]
       };
     });
-  }, []);
+
+    // Now highlight the code
+    try {
+      const result = hljs.highlight(code, { language: 'piccode' });
+      setHighlightedCode(result.value);
+    } catch (error) {
+      console.error('Highlighting error:', error);
+      setHighlightedCode(code);
+    }
+  }, [code]);
 
   const copyToClipboard = async () => {
     try {
@@ -92,8 +85,6 @@ const CodeBlock = ({ code, title }: CodeBlockProps) => {
       console.error('Failed to copy code:', err);
     }
   };
-
-  const highlightedCode = hljs.highlight(code, { language: 'piccode' }).value;
 
   return (
     <Card className="relative overflow-hidden bg-gray-900 border-0 shadow-2xl">
