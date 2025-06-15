@@ -18,7 +18,8 @@ const App = () => (
       attribute="class"
       defaultTheme="light"
       enableSystem={false}
-      disableTransitionOnChange
+      storageKey="piccodescript-theme"
+      disableTransitionOnChange={false}
     >
       <TooltipProvider>
         <Toaster />
